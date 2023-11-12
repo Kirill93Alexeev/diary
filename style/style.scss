@@ -17,6 +17,24 @@ body {
   margin: 0 auto;
 }
 
+.mobile-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #050F28;
+  border: none;
+  border-radius: 50px;
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 11px;
+  &:hover {
+    cursor: pointer;
+background-color: #88A1DE;
+
+  }
+}
+
+
 .main-header {
   min-height: 172px;
   &__logo {
@@ -92,6 +110,7 @@ main {
     font-weight: 700;
     transition: 0.3s;
     &:hover {
+      cursor: pointer;
       color: #050f28;
       background-color: #88a1de;
     }
@@ -119,6 +138,7 @@ main {
     margin-bottom: 72px;
     transition: 0.3s;
     &:hover {
+      cursor: pointer;
       outline: 2px solid #88a1de;
     }
   }
@@ -298,7 +318,20 @@ main {
 }
 
 @media (max-width: 375px) {
+
+main {
+  border-radius: 30px 30px 0 0;
+}
+
+.mobile-btn {
+  display: block;
+}
+
   .main-header {
+    min-height: 60px;
+    &__wrap {
+      margin: 6px 0;
+    }
     &__logo {
       width: 186px;
       height: 45.853px;
@@ -313,12 +346,14 @@ main {
     padding: 10px;
   }
   .diary {
+    padding: 29px 0 10px;
     &__top {
       margin-bottom: 173.5px;
     }
     &__title {
       width: 343px;
       font-size: 42px;
+      line-height: 90%;
       margin-bottom: 28px;
     }
     &__wrap-button {
