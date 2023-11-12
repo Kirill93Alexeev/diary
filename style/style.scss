@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.main-header {
+  min-height: 172px;
+  &__logo {
+    width: 448px;
+    height: 110.441px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 0 34px;
+  }
+  &__btn {
+    font-family: "Nunito", sans-serif;
+    padding: 42px 120px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.08px;
+    text-transform: uppercase;
+    border-radius: 65px;
+    background: #050f28;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #88a1de;
+    }
+  }
+}
+
+main {
+  border-radius: 80px 80px 0px 0px;
+  background: #f6f6f6;
+  padding-bottom: 167px;
+}
+
+.diary {
+  padding-top: 80px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 69px;
+    flex-wrap: wrap;
+  }
+  &__title {
+    width: 202px;
+    color: #050f28;
+    font-size: 112px;
+    font-weight: 700;
+  }
+  &__button-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrap-button {
+    width: 400px;
+  }
+  &__btn {
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background: #f6f6f6;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    color: #050f28;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    &:hover {
+      color: #050f28;
+      background-color: #88a1de;
+    }
+    &:active {
+      color: #050f28;
+      background-color: #88a1de;
+    }
+    &:focus {
+      color: #050f28;
+      background-color: #88a1de;
+    }
+  }
+  &__bottom-btn {
+    font-family: "Nunito", sans-serif;
+    color: #050f28;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1.32px;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 50px;
+    background: #fff;
+    padding: 42px 0;
+    border: none;
+    margin-bottom: 72px;
+    transition: 0.3s;
+    &:hover {
+      outline: 2px solid #88a1de;
+    }
+  }
+}
+
+.btn-new {
+  margin-right: 7px;
+}
+
+.btn-old {
+  margin-right: 7px;
+}
+
+.records {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(587px, 1fr));
+  gap: 80px 39px;
+  margin-bottom: 60px;
+}
+
+.record {
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background: #fff;
+  padding: 70px 40px 70px 30px;
+  &__title {
+    color: #050f28;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    color: #050f28;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 170%; /* 30.6px */
+    margin-bottom: auto;
+  }
+  &__datetime-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #88a1de;
+    font-size: 20px;
+  }
+}
+
+.date-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.time-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.datetime {
+  margin-left: 10px;
+}
+
+.number-pages {
+  max-width: 586px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  &__numbers {
+    max-width: 266px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__number {
+    text-decoration: none;
+    color: #050f28;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:hover {
+      color: #88a1de;
+    }
+    &:active {
+      color: #88a1de;
+    }
+    &:focus {
+      color: #88a1de;
+    }
+  }
+  &__previous-btn {
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(110%);
+    }
+  }
+  &__next-btn {
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(110%);
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: #050f28;
+  &__wrap {
+    min-height: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    color: #fff;
+  }
+  &__btn {
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #050f28;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 24px 60px;
+    border-radius: 40px;
+    background: #88a1de;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+  &__svg {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-header__logo {
+    width: 312px;
+    height: 76.915px;
+  }
+
+  .diary__title {
+    font-size: 72px;
+  }
+
+  .container {
+    max-width: 1024px;
+    padding: 0 20px;
+  }
+
+  .record {
+    min-height: 530px;
+  }
+
+  .records {
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-header {
+    &__logo {
+      width: 186px;
+      height: 45.853px;
+    }
+    &__btn {
+      display: none;
+    }
+  }
+
+  .container {
+    max-width: 375px;
+    padding: 10px;
+  }
+  .diary {
+    &__top {
+      margin-bottom: 173.5px;
+    }
+    &__title {
+      width: 343px;
+      font-size: 42px;
+      margin-bottom: 28px;
+    }
+    &__wrap-button {
+      width: 357px;
+    }
+    &__btn {
+      font-size: 14px;
+      padding: 10px 14px;
+    }
+  }
+
+  .record {
+    min-height: 520px;
+    padding: 34px 14px 50px 10px;
+    &__title {
+      color: #050f28;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+  .records {
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+  }
+
+  .number-pages {
+    &__previous-btn {
+      margin-right: 28px;
+    }
+    &__next-btn {
+      margin-left: 28px;
+    }
+  }
+
+  .footer {
+    &__text {
+        margin: 45px 0 22px 20px;
+    }
+    &__btn {
+      margin: auto;
+      left: 10px;
+      right: 10px;
+      bottom: 60px;
+      margin-bottom: 18px;
+      &:hover {
+        transform: scale(90%);
+      }
+    }
+  }
+}
